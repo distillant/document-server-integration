@@ -1,7 +1,7 @@
 version: "2.2"
 
 services:
-  app_container.com:
+  appcontainer.com:
     build:
       context: .
     ports:
