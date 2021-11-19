@@ -186,7 +186,7 @@
             config.events.onRequestSendNotify = onRequestSendNotify;
         }
 
-        if (config.editorConfig.createUrl) {
+        if (config.editorConfig.createUrl && config.editorConfig.user.id != "uid-0") {
             config.events.onRequestSaveAs = onRequestSaveAs;
         }
 

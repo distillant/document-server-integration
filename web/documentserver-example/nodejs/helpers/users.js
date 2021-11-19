@@ -55,6 +55,7 @@ var descr_user_0 = [
     "The file favorite state is undefined",
     "Can't mention others in comments",
     "Can't create new files from the editor",
+    "Can't use Save Copy as... from the editor"
     //"Can’t submit forms"
 ];
 
