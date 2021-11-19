@@ -1,17 +1,28 @@
 version: "2.2"
 
 services:
-  appcontainer.com:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./conf/nginx.dev.conf:/etc/nginx/nginx.dev.conf:ro
+    command: [ nginx-debug, '-g', 'daemon off;', '-c', '/etc/nginx/nginx.dev.conf']
+    depends_on:
+      - appcontainer
+      - documentserver
+
+  appcontainer:
     build:
       context: .
     ports:
-      - 4000:4000
-    command: python manage.py runserver 0.0.0.0:4000
+      - 3999:3999
+    command: python manage.py runserver 0.0.0.0:3999
 
   documentserver:
     image: onlyoffice/documentserver
     ports:
-      - 80:80
+      - 1080:80
 
 networks:
   default:

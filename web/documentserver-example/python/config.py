@@ -17,7 +17,8 @@ DOC_SERV_CONVERT = [                                           # file extensions
 
 DOC_SERV_TIMEOUT = 120000
 
-DOC_SERV_SITE_URL = 'http://documentserver/'
+DOC_SERV_SITE_URL = 'http://3.137.147.86/'
+#DOC_SERV_SITE_URL = 'http://documentserver/'
 
 DOC_SERV_CONVERTER_URL = 'ConvertService.ashx'
 DOC_SERV_API_URL = 'web-apps/apps/api/documents/api.js'
